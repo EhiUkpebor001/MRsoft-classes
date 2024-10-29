@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        h2 {
+            color: blue;
+            background-color: aliceblue;
+            padding: 8px;
+        }
+
+        .box {
+            background-color: burlywood;
+            color: brown;
+            font-weight: 800;
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+            width: 400px;
+            /* min-width: 800px; */
+            height: 400px;
+        }
+
+        .box2 { 
+            color: brown;
+            font-weight: 800;
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+            /* width: 400px;
+            min-width: 800px; */
+            height: 400px;
+        }
+
+        /* 
+            CSS MEDIA QUERIES
+            
+                MEDIA TYPES
+                    Media types come right after the '@media rule', if we don’t apply a media type, the @media rule selects ALL types of devices by default.
+                        all — for all media types
+                        print — for printers
+                        screen — for computer screens, tablets, and smart-phones
+                        speech — for screen readers that “read” the page out loud
+
+                SYNTAX: 
+                    @media media type and (condition: breakpoint) {
+                        // CSS rules
+                    }
+        */
+
+        @media speech{
+
+        }
+
+        @media all and (orientation:landscape) {
+            h3{
+                color: cadetblue;
+            }
+        }
+
+        @media screen, (max-width:400px){
+            /* commas are for "or" and not "and" */
+        }
+
+        @media print, (orientation:portrait)  {
+            h2{
+                color: red;
+                font-size: 40px;
+            }
+        }
+
+        /* 
+            Max-width: Used for Desktop-first Designs
+                Desktop-first approach is also called Graceful Degradation
+        */
+
+        @media screen and (max-width: 400px){
+            h2{
+                background-color: yellow;
+            }
+        }
+
+        /*
+            Min-width: Used for Mobile-first Designs
+                Mobile-first approach is also called Progressive advancement.
+        */
+
+        @media (min-width: 400px){
+            h2{
+                background-color: purple;
+            }
+        }
+
+        /*
+            Common breakpoints for widths of devices
+                320px — 480px: Small screens, Mobile devices
+                481px — 768px: Tablet screens, iPads
+                769px — 1024px: Medium screens, Laptops
+                1025px — 1200px: Large screens, Desktops
+                1201px and more: Extra large screens, TV
+        */
+    </style>
+</head>
+<body>
+
+    <input type="text" name="#" id="#" placeholder="Enter your nane" aria-placeholder="Your name">
+    
+    <h2> <abbr title="Cascading Style Sheet">CSS</abbr> Media Queries</h2>
+
+    <h3>CSS Media Queries</h3>
+    
+    <!-- 
+        The @media rule introduced in CSS 2 makes it possible to define different styles for different media types.
+    -->
+
+    <div class="box">
+        This is a box
+    </div>
+
+    <div class="box2" style="background-color: violet; min-width: 300px; overflow: scroll;">
+        This is a box
+    </div>
+</body>
+</html>

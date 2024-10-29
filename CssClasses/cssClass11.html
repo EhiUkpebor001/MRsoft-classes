@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+
+    <style>
+        .static-box {
+            width: 300px;
+            height: 300px;
+            padding: 15px;
+            background-color: green;
+            border: 2px solid black;
+            position: static;
+            left: 50px; /* This won't work, because it is a static position */
+        }
+
+        .relative-box {
+            width: 300px;
+            height: 300px;
+            padding: 15px;
+            background-color: yellow;
+            border: 2px solid black;
+            position: relative;
+            left: 50px;
+            top: 30px;
+        }
+
+        .absolute-box {
+            width: 300px;
+            height: 300px;
+            padding: 15px;
+            background-color: blue;
+            border: 2px solid black;
+            position: absolute;
+            left: 150px;
+            top: 30px;
+        }
+
+        .absolute-box:hover {
+            z-index: -1;
+        }
+
+        /* 
+                CSS Axis
+            There are three axis;
+            1. x-axis: This is the horizontal part/line.
+            2. y-axis: This is the vertical part/line.
+            3. z-axis: This is the intersection between x and y axis.
+
+            NOTE:
+             z-index DOES NOT work for elements with Static position.
+        */
+
+        .absolute-parent {
+            background-color: goldenrod;
+            position: relative;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- 
+            CSS Positions
+        1. Static - default: The element is positioned according to the normal flow of the page.
+                            So if we set left/right/top/bottom/z-index, there would be NO effect on the element.
+
+        2. Relative: The element's original position is according to the normal flow of the page, just like the Static value.
+                        However, if we set left/right/top/bottom/z-index, there would be effect on the element.
+
+        3. Absolute: The element is completely removed from the document flow. 
+                    It is positioned with respect to its containing block (i.e. its parent). 
+                    It may overlap other elements or be overlapped by them.
+
+        4. Fixed: It is similar to the Absolute value, except that the containing block is always the viewport.
+                If an element is a fixed position, it doesn't leave the position it is placed at, regardless of wherever we move on the webpage.
+
+        5. Sticky: Here, the element sticks to the top of its nearest positioned ancestor that has the "scrolling mechanism".
+
+
+
+            CSS Position RULES.
+        1. An absolute child element, MUST be in a relative parent element. So that it can remain inside the parent element/div.
+                If you position/place an absolute child element into an absolute parent element, it WILL NOT stay inside the parent element.
+    -->
+
+    <div class="static-box">
+        <h2>Position Static</h2>
+        <p>This box has a static position</p>
+    </div>
+    
+    <div class="relative-box">
+        <h2>Position Relative</h2>
+        <p>This box has a relative position</p>
+    </div>
+
+    <div class="absolute-parent">
+        <h3>
+            Absolute Children
+        </h3>
+        <div class="absolute-box">
+            <h2>Position Absolute</h2>
+            <p>This box has a absolute position</p>
+        </div>
+    
+        <div class="absolute-box" style="background-color: brown; top: 90px;">
+            <h2>Position Absolute</h2>
+            <p>This box has a absolute position</p>
+        </div>
+    </div>
+    
+
+</body>
+</html>

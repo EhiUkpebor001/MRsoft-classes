@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 5</title>
+
+    <style>
+        body {
+            /* background-color: violet; */
+            background-image: url("../images/b10.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #brand {
+            display: flex;
+        }
+
+        #brand img {
+            border-radius: 40px;
+        }
+
+        #brand h1::first-letter {
+            color: blueviolet;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <img src="../images/shop.jpeg" alt="Brand Logo" id="logo" width="80px" height="80px">
+            <h1>Brand Name</h1>
+        </div>
+
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Contact">Contact Us</a>
+            <a href="#Blog">Blog</a>
+        </nav>
+
+        <div>
+            <button>Login</button>
+            <button>Sign Up</button>
+        </div>
+
+    </header>
+
+    <main></main>
+    
+    <footer></footer>
+</body>
+</html>

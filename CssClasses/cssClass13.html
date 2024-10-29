@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Class 13 - CSS Variables & Box-sizing</title>
+
+    <style>
+        :root {
+            --mySpecialPurple: rgba(152, 35, 111, 0.839);
+            --primaryRed: rgba(83, 15, 7, 0.8);
+            --mainFont: "Epilogue";
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--mySpecialPurple);
+        }
+
+        p {
+            font-family: var(--mainFont);
+        }
+
+        h2 {
+            --myLocalBlue: rgb(161, 161, 237);
+            background-color: var(--myLocalBlue);
+        }
+
+        #contentBox, #borderBox {
+            width: 200px;
+            /* height: 200px; */
+            background-color: aliceblue;
+            padding: 20px;
+            border: 10px solid blue;
+        }
+
+        #contentBox {
+            box-sizing: content-box;
+            margin-bottom: 5px;
+        }
+
+        #borderBox {
+            box-sizing: border-box;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- 
+        CSS Variables
+            The var() function is used to insert the value of a CSS variable.
+            A CSS variable can be of local or global scope.
+            The variable name must begin with two dashes (--) and it is case sensitive.
+            Global scoped variable can be accessed throughout the entire document.
+            To create a variable with global scope, we declare it inside the :root selector.
+    -->
+
+    <header>
+        <h2>Logo</h2>
+
+        <nav style="background-color: var(--primaryRed); padding: 10px;">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="#">
+            <button>Login</button>
+            <button>Sign In</button>
+        </div>
+    </header>
+    
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro nesciunt modi deserunt ipsa voluptatum cum quibusdam recusandae! Tempora laborum provident cum quam. Laudantium culpa quaerat perferendis ab ullam quasi!
+    </p>
+
+    <!-- 
+        CSS BOX SIZING
+            In CSS, the box-sizing property is used to define how the width and height of an element are calculated.
+            It determines whether padding and borders are included in the elements total width and height.
+
+            Content-box: Is the default value. Here, only the content's width and height are considered.
+                So, if the content is not up to the given width, space is given to the content, so it reaches the width, 
+                before considering the padding and border.
+                Using this, the given width and height is usually increased because content is considered first before adding the measurement of the padding and borders.
+
+            Border-box: The padding and border are included inside the width and height. This means that, 
+                the content size is reduced to make space for the padding and borders.
+                i.e. If a width is given, the content is reduced, so that padding and borders are able to fit into that given width.
+                Using this, the given width and height remains the same because content, the padding and borders are expected to fit into the given measurement, if the measurement is not able to contain the content, it begins to overflow.
+    -->
+
+    <div id="contentBox">
+        This shows content box.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloremque veritatis, esse fugit ab enim error? Consectetur ea, ipsam, qui tenetur necessitatibus voluptatum esse culpa unde optio quos, excepturi fugit?
+    </div>
+
+    <div id="borderBox">
+        This shows border box.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quidem, veritatis laborum quas nesciunt ipsum modi asperiores porro, eum ipsa assumenda itaque suscipit molestias nulla rerum eaque exercitationem consectetur dicta!
+    </div>
+
+</body>
+</html>

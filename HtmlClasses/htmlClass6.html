@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+</head>
+<body>
+    <!-- 
+    Semantic tags in HTML: A semantic tag clearly describes it's meaning to both the browser and the developer.
+    Example of Non-Semantic tags: <div>, <span> - These tell us nothing about the content.
+    Semantic tags: <header>, <footer>, <form>, <nav>, <section>, <main>,etc These defines it's ontent  
+    -->
+    <!-- 
+        Using Div and span tags
+        A <div> is used as a container for other HTML elements, it is a block level element.
+        A <span> tag is similar to the <div> but it is an inline level element.
+    -->
+
+    <header>
+        <h1>Company Logo</h1>
+        <nav>
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+            <a href="">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas architecto rem earum quisquam harum distinctio commodi corporis, sequi itaque dolorem.
+            </p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form style="background-color: darkcyan; padding: 30px; width: 50%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" placeholder="Enter your name"><br><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" required><br><br>
+                <label for="title">Title</label>
+                <input type="text" value="Admin" readonly> <br><br>
+                <input type="password" placeholder="Enter your password"><br><br>
+                <input type="email" placeholder="Enter your Email"><br><br>
+                <input type="submit" value="Register Now" style="padding: 10px; background-color: lightslategray; font-weight: 700; border-radius: 20px;">
+            </form>
+        </section>
+        <div id="about" style="background-color: darkslategray; color: aliceblue;">
+            <h2>
+                About <span style="color: green; background-color: yellow;"> MrSoft</span>
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </p>
+        </div>
+    </main>
+    <footer>
+        <h1>Company Logo</h1>
+        <nav>
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+            <a href="">Blog</a>
+        </nav>
+        <p>All rights reserved MrSoft &copy; 2024;</p>
+        <!-- HTML Symbols -->
+        <p>Register symbol &reg;</p>
+        <p>Trademark symbol &trade;</p>
+        <p>Arrow Symbol <span style="font-size: 70px; font-weight: 800; color: green;">&uarr;</span> </p>
+        <p>Arrow Symbol <span style="font-size: 70px; font-weight: 800; color: red;">&larr;</span> </p>
+        <p>Arrow Symbol &darr;</p>
+        <p>Arrow Symbol &larr;</p>
+        <p>Arrow Symbol &rarr;</p>
+        <p>Euro Symbol &euro;</p>
+        
+        <!-- HTML Emojis -->
+         <p>&#128516;</p>
+         <p>&#128525;</p>
+    </footer>   
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    
+    <h1>Welcome to JavaScript</h1>
+
+    <button onclick="changeColor()">Change body background color</button>
+
+    <!-- 
+        The script tag is used to include javascript into a HTML file.
+            The src attribute in the script opening tag, is used to add an external javascript file to the HTML file.
+
+            NOTE: 
+                The url link in the src attribute, takes precedence over the content in the script tag.
+                i.e If a script element has a src attribute specified, it should not have a script embedded inside its tags.
+    -->
+
+    <script src="class2.js"> </script>
+
+    <script src="./colorChanger.js">
+
+        // document.body.style.backgroundColor = "pink";
+    </script>
+
+</body>
+</html>

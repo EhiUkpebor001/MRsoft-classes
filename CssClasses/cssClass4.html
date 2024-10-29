@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* We can select elements based on a specific relationship btw them */
+        #profile p {
+            color: red;
+            font-weight: 700;
+        }
+
+        /* We can select multiple elements by seperating the selectors with a comma. */
+        p, button, h1 {
+            background-color: bisque;
+        }
+
+        /*
+            Pseudo Classes: A pseudo class is used to define a 'special state' of an element.
+                E.g; 
+                    - To style an element when a user mouses/hovers over it, 
+                    - To style an element when it gets focus, etc.
+        */
+
+        #learnBtn {
+            background-color: blue;
+            color: aliceblue;
+            font-weight: 800;
+            padding: 8px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        #learnBtn:hover {
+            color: blue;
+            background-color: aliceblue;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 5px;
+        }
+
+        ul li:hover {
+            border-bottom: 3px solid blue;
+            cursor: pointer;
+            display: inline;
+        }
+
+        /* We use the 'list-style' attribute to change or remove the style on the list */
+
+        #list {
+            list-style-type: none;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        a:active {
+            color: brown;
+        }
+
+        input:focus {
+            background-color: bisque;
+        }
+
+        /* 
+            A CSS pseudo element is used to style 'specified parts' of an element. 
+                E.g; 
+                    - selected part, 
+                    - first letter or line, 
+                    - placeholder, etc
+        */
+
+        input::placeholder{
+            color: brown;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        #head::first-letter{
+            font-size: 48px;
+            color: red;
+        }       
+        
+        #para::first-line{
+            background-color: grey;
+        }
+
+        #para::selection{
+            background-color: green;
+            color: white;
+        }
+
+        #head::before{
+            content: "Text";
+        }
+
+        #head{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">
+        <img src="../images/lock.png" alt="lock image" width="50px" height="50px" style="display: inline;">
+    </a> 
+
+    <h1 id="head">Company Name</h1>
+
+    <nav id="nav">
+        <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact Us</li>
+        <li>Blog</li>
+        </ul>
+    </nav>
+
+    <ul id="list">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ul>
+
+    <div id="profile">
+        <h2>Profile</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, delectus.
+            <button id="learnBtn">Learn more</button>
+        </p>
+    </div>
+
+    <p id="para">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, necessitatibus?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste voluptatem voluptates repellat placeat quo quae sed veritatis odio? Nulla, cupiditate iste accusantium voluptatem earum porro cum odio nam aliquam recusandae.
+    </p>
+
+    <button>Enter</button>
+    <a href="#head">Go to h1</a>
+    <a href="#nav">Go to nav</a>
+    <a href="#para">Go to Paragraph</a>
+    
+    <input type="text" placeholder="search">
+</body>
+</html>

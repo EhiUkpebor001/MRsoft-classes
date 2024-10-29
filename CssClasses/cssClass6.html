@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 6 - CSS ELEMENTS TYPES</title>
+
+    <style>
+
+        /* CSS Displays */
+
+        /* 
+            Using 'visibility: hidden' the content is hidden, but the space the content occupies is remains or is still visible.
+            However, using 'display: none' the content is hidden, and the space the content occupies is removed as well.
+        */
+        ul {
+            list-style-type: square;
+            display: none;
+            /* visibility: hidden; */
+        }
+        
+        /* 
+            Inline elements CANNOT have defined height or width, they take the height and width of the content.
+                Examples of inline elements: a, img, span, etc. 
+        */
+
+        a {
+            /* display: block; */
+            background-color: rebeccapurple;
+        }
+
+        /* 
+            Block elements CAN have defined height and width.    
+                Examples of block elements: heading tags, divs, li, semantic tags, p, etc. 
+        */
+
+        h1 {
+            display: inline;
+            height: 300px;
+        }
+
+        /* 
+            Inline-block elements: This combines both characteristics of inline and block. 
+        */
+
+        h2 {
+            display: inline-block;
+            background-color: brown;
+            height: 300px;
+        }
+
+        /* 
+            Flexbox operates in a 2-axes system, we have;
+                - a main axis and 
+                - a cross axis. 
+        */
+
+        #boxes {
+            background-color: blue;
+            padding: 20px;
+            display: flex;
+            /* flex-direction: row-reverse; */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 800px;
+        }
+
+        .box {
+            background-color: aliceblue;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="background-color: blue;">This has a default display of block</h1>
+
+    <h2>This has a display of inline block</h2>
+
+    <ul>
+        <li>Rice</li>
+        <li>Soup</li>
+        <li>Stew</li>
+        <li>Garri</li>
+    </ul>
+
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eum qui ullam voluptatum earum numquam, aspernatur ex reprehenderit aliquid in enim necessitatibus provident ea recusandae perspiciatis consequatur! Nemo, necessitatibus perferendis.
+    </p>
+
+    <a href="#">Scroll to top</a>
+
+    <div id="boxes">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+
+    <style>
+        .box, .box2 {
+            height: 250px;
+            width: 250px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 800;
+            color: blue;
+            background-color: rgb(24, 65, 101);
+            border: 2px dashed blue;
+            animation: slider 4.5s ease 2s infinite reverse;
+        }
+
+        @keyframes slider {
+            0% {
+                transform: translateX(0);
+                opacity: .2;
+            }
+
+            50% {
+                transform: translateX(800px);
+                opacity: .6;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .box2 {
+            animation: box-slider 3.5s ease 500ms infinite reverse;
+        }
+
+        @keyframes box-slider {
+            0% {
+                transform: translateX(0);
+                opacity: .2;
+            }
+
+            50% {
+                transform: translateX(400px);
+                opacity: .6;
+            }
+
+            100% {
+                transform: translateX(450px);
+                opacity: 1;
+            }
+        }
+
+       .ball, .ball2 {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 800;
+            color: white;
+            background-color: green;
+            border: 2px dashed lightgreen;
+            /* animation: bounce 3.5s infinite; */
+            animation-name: bounce;
+            animation-duration: 3.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+            animation-direction: alternate;
+       }
+
+       @keyframes bounce {
+            0% {
+                transform: translateX(0) translateY(0) rotate(0) ;
+            }
+
+            100%{
+                transform: translateX(500px) translateY(150px) rotate(360deg);
+                background-color: yellow;
+            }
+       }
+
+       .ball2 {
+            animation: ball-bounce 3s infinite !important;
+       }
+
+       @keyframes ball-bounce {
+            0%, 100% {
+                transform: translateX(0) translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-50px) rotate(360deg);
+                background-color: rgb(255, 149, 0);
+            }
+        }
+
+       nav {
+            padding: 20px;
+       }
+
+       nav a {
+            margin: 5px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+            transition: 500ms;
+       }
+
+       nav a:hover {
+            border-bottom: 4px solid blue;
+       }
+
+       .line{
+            background-color: blue;
+            width: 50px;
+            height: 4px;
+            margin: 10px;
+       }
+
+    </style>
+</head>
+<body bgcolor="lavender">
+    <h1>CSS Animations</h1>
+
+    <nav>
+        <a href="">Home</a>
+        <div class="line"></div>
+        <a href="">Blog</a>
+        <div class="line"></div>
+        <a href="">Contact</a>
+        <div class="line"></div>
+    </nav>
+
+    <!-- 
+        Animations allow more complex sequences of changes over time, compared to transitions, with '@keyframes', we define how the element's style will change at specific points in time.
+
+        SYNTAX:
+            @keyframes animation-name {
+                0% {
+                    -- Starting styles --
+                }
+
+                50% {
+                    -- Intermediate styles --
+                }
+
+                100% {
+                    -- Ending styles --
+                }
+            }
+            
+            selector {
+                animation: animation-name duration timing-function delay iteration-count direction fill-mode;
+            }
+    -->
+        <div class="box">
+            BOX
+        </div>
+
+        <div class="box2">
+            SECOND BOX
+        </div>
+
+        <div class="ball">
+            My Ball
+        </div>
+
+        <div class="ball2">
+            My Second Ball
+        </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Intro</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h1 {
+            color: blue; 
+            font-size: 30px;
+        }
+
+        h3 {
+            color: orange;
+            font-size: 18px;
+            text-align: right;
+        }
+    </style>
+
+</head>
+<body>
+    <nav id="nav">
+        <h1>CSS Introduction</h1>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+
+        <button id="login">
+            Login
+            <img src="../images/lock.png" alt="Lock Icon" id="lock">
+        </button>
+
+        <div style="background-color: grey; border-radius: 10px; height: 20px; padding: 5px;">
+            <img src="../images/lock.png" alt="Lock Icon" id="lock">
+            <input type="text" name="" id="" style="border: none; background-color: grey;">
+        </div>
+    </nav>
+
+    <h3>
+        CSS defines the layout of web pages!
+    </h3>
+
+    <!-- 
+        CSS Stands for Cascading Sylye Sheets
+        It defines how HTML elements are to be displayed on screen.
+        
+        SYNTAX:
+            selector {
+                property: value;
+            }
+
+        e.g 
+            h1 {
+                color: red; 
+                font-size: 20px;
+            }
+
+        There are three ways to use CSS on HTML elements
+            1) Inline Styling: The CSS rule is added in the style attribute of the opening tag.
+            2) Internal Styling
+            3) External Styling
+    -->
+
+    <!-- Inline Styling -->
+    <h2 style="color: green; font-size: 18px; text-align: center;">CSS Is really nice!</h2>
+    
+    <!--  -->
+     <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias nobis nihil, quam fuga a quo odit quas fugit dolore saepe inventore sapiente vitae, accusamus obcaecati atque accusantium, facere delectus.
+     </p>
+
+     <button>Read More &rarr;</button>
+
+     <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quam.
+     </p>
+
+     <button id="start">Start Game</button>
+
+     <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit deleniti quisquam nemo! Ducimus, doloribus cum. Harum inventore iusto impedit ab?
+    </p>
+
+    <button id="stop">Stop Game</button>
+
+    <div>
+        <a href="" class="nav">Home</a>
+        <a href="" class="nav">About</a>
+        <a href="" class="nav">Contact</a>
+        <a href="" class="nav">Blog</a>
+    </div>
+
+</body>
+</html>

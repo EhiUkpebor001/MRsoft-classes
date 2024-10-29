@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max/Min Width and Height Examples</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .example {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 40px;
+      background-color: #f9f9f9;
+    }
+
+    /* Example 1: Min Width */
+    .min-width-box {
+      width: 100%;
+      min-width: 200px;
+      background-color: #b3e5fc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Example 2: Max Width */
+    .max-width-container {
+      width: 80%;
+      max-width: 1200px;
+      background-color: #c5e1a5;
+      padding: 20px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Example 3: Min Height */
+    .min-height-card {
+      background-color: #ffcc80;
+      padding: 10px;
+      min-height: 300px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Example 4: Max Height */
+    .max-height-image {
+      max-height: 400px;
+      overflow: hidden;
+    }
+    
+    .max-height-image img {
+      width: 100%;
+    }
+
+    /* Full Example: Responsive Layout */
+    .container {
+      display: flex;
+      width: 100%;
+      background-color: #e0f7fa;
+      margin-bottom: 40px;
+    }
+
+    .sidebar {
+      background-color: #ffab91;
+      min-width: 200px;
+      max-width: 300px;
+      height: 100vh;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .main-content {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 20px;
+      min-height: 500px;
+      max-height: 800px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Max/Min Width and Height Examples</h1>
+
+  <!-- Example 1: Min Width -->
+  <h2>Example 1: Min Width</h2>
+  <div class="example">
+    <div class="min-width-box">
+      This box has a <strong>min-width</strong> of 200px.
+    </div>
+  </div>
+
+  <!-- Example 2: Max Width -->
+  <h2>Example 2: Max Width</h2>
+  <div class="example">
+    <div class="max-width-container">
+      This container has a <strong>max-width</strong> of 1200px. Resize the window to see the effect.
+    </div>
+  </div>
+
+  <!-- Example 3: Min Height -->
+  <h2>Example 3: Min Height</h2>
+  <div class="example">
+    <div class="min-height-card">
+      This card has a <strong>min-height</strong> of 300px, ensuring it doesn't shrink below this size.
+    </div>
+  </div>
+
+  <!-- Example 4: Max Height -->
+  <h2>Example 4: Max Height</h2>
+  <div class="example">
+    <div class="max-height-image">
+      <img src="https://via.placeholder.com/600x800" alt="Example Image">
+      This image is constrained by a <strong>max-height</strong> of 400px.
+    </div>
+  </div>
+
+  <!-- Full Example: Responsive Layout -->
+  <h2>Full Example: Responsive Layout</h2>
+  <div class="example">
+    <div class="container">
+      <div class="sidebar">
+        Sidebar with <strong>min-width</strong> and <strong>max-width</strong>
+      </div>
+      <div class="main-content">
+        This is the main content area with <strong>min-height</strong> of 500px and <strong>max-height</strong> of 800px. If content exceeds the max height, it will scroll inside this box.
+        <br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec urna eu risus interdum gravida. Sed pharetra nibh ac justo efficitur viverra. Integer a ornare purus. Proin pretium, lorem in hendrerit cursus, neque dui luctus felis, vitae varius nibh velit quis neque. Mauris convallis aliquet libero, vel volutpat nisi aliquet ut. Suspendisse potenti. Aenean viverra enim sed orci elementum, in gravida felis aliquet. Etiam placerat purus eget justo lacinia, non facilisis odio eleifend. 
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

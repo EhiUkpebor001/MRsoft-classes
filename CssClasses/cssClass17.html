@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients and Transforms</title>
+
+    <style>
+        #grad1 {
+            width: 400px;
+            height: 400px;
+            /* background-image: linear-gradient(to top right, red, blue); 
+            background-image: linear-gradient(180deg, green, brown,  purple, yellow); */
+            background-image: linear-gradient(90deg, green, rgba(128, 0, 128, 0.62), rgba(255, 238, 0, 0.563));
+        }
+
+        #grad1:hover {
+           /* transform: scale(2, 3);    Here we are specifying that we want to increase the width and the height */
+           transition: all ease 1.5s; 
+           transform: scale(2, 1) translateX(300px);
+           cursor: pointer;           
+        }
+
+        #grad2 {
+            width: 400px;
+            height: 400px;
+            /* background-image: radial-gradient(red, yellow, blue); */
+            /* background-image: radial-gradient(red 10%, yellow 70%, blue 5%); */
+            /* background-image: radial-gradient(yellow, green, brown); */
+            /* background-image: radial-gradient(farthest-side at 60% 55%, green, red, blue); */
+            background-image: radial-gradient(closest-side at 60% 55%, green, red, blue);
+        }
+
+        #grad3 {
+            width: 400px;
+            height: 400px;
+            background-image: conic-gradient(red 180deg, green, blue, yellow);
+            border-radius: 50%;
+        }
+
+        #grad3:hover {
+            transition: ease 1.5s;
+            /* transform: rotate(180deg); */
+            transform: rotate(290deg);
+            /* transform: rotate(300deg); */
+        }
+
+        .translate {
+            width: 300px;
+            height: 300px;
+            background-color: cadetblue;
+            /* transition: ease 1s; */
+            /* transition: ease-in 1s; */
+            transition: ease-in-out 1s;
+            /* transition: ease-out 1s; */
+        }
+
+        .translate:hover {
+            transform: translate(500px, 300px);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h2>Using Gradients in CSS</h2>
+
+    <!--
+        Gradients helps us to display a smooth transition between two or more specified colors.
+            There are three types of gradients;
+                -- Linear(goes down/up/left/right/diagonally)
+                -- Radial(this is defined by their center)
+                -- Conic(this is rotated around a center point)
+    -->
+
+    <h2>Linear Gradients</h2>
+    <!-- 
+        SYNTAX:
+            background-image: linear-gradient(direction, color-stop1, color-stop2, ....);
+    -->
+    
+    <div id="grad1"></div>
+
+    <h2>Radial Gradients</h2>
+    <!--
+        SYNTAX:
+            background-image: radial-gradient([shape size] at [position], start-color, ..., last-color);
+    -->
+
+    <div id="grad2"></div>
+
+    <h2>Conic Gradients</h2>
+    <!--
+        SYNTAX:
+            background-image: conic-gradient(from [angle] at [position], color[degree], color[degree], ...);
+    -->
+
+    <div id="grad3"></div>
+
+    <h2 style="text-shadow: 2px 2px grey; font-size: 50px; text-align: center;">Text Shadow Example</h2>
+
+    <img src="../images/shop.jpeg" alt="#" style="box-shadow: 10px 10px 5px;">
+
+    <h2 style="font-size: 40px; text-align: center; text-shadow: 3px 3px rgba(0, 0, 255, 0.304);">CSS Transforms</h2>
+
+    <!-- 
+        CSS transforms allows us to move, rotate, scale, skew elements.
+    -->
+
+    <div class="translate"></div>
+
+</body>
+</html>

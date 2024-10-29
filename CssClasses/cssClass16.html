@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four-card assignment using mobile first</title>
+
+    <style>
+        /* @media screen and (max-width: 500px) {
+            body {
+                background-color: red;
+            }
+        } */
+
+        :root {
+            --red: hsl(0, 78%, 62%);
+            --cyan: hsl(180, 62%, 55%);
+            --orange: hsl(34, 97%, 64%);
+            --blue: hsl(212, 86%, 64%);
+
+            --gray-100: hsl(0, 0%, 98%);
+            --gray-300: hsl(229, 6%, 66%);
+            --gray-700: hsl(234, 12%, 34%);
+        }
+
+        .container {
+            min-height: 100vh;
+            min-width: 80vw;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero .normal {
+            font-weight: 200;
+        }
+
+        .hero .bold {
+            color: midnightblue;
+        }
+
+        .hero_title {
+            font-size: 1.5rem;
+            line-height: .5rem;
+        }
+
+        .hero_body {
+            line-height: 1.65;
+            color: hsl(229, 6%, 66%);
+            font-size: .90rem;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: aliceblue;
+            padding: 5px;
+            margin: 8px;
+            border-radius: 5px;
+            min-width: 250px;
+            height: fit-content;
+            box-shadow: 0 5px 8px var(--gray-300);
+            position: relative;
+        }
+
+        .card_title {
+            color: var(--gray-700);
+            font-size: 1.3rem;
+        }
+
+        .card_body {
+            color: var(--gray-300);
+            font-size: 1.1em;
+        }
+
+        .card_image {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            /* border: 1px solid black; */
+        }
+
+        .cyan {
+            border-top: 4px solid var(--cyan);
+        }
+
+        .red {
+            border-top: 4px solid var(--red);
+        }
+        
+        .blue {
+            border-top: 4px solid var(--blue);
+        }
+        
+        .orange {
+            border-top: 4px solid var(--orange);
+            margin-top: 5px;
+        }
+
+        @media (min-width: 400px) {
+            .card {
+                max-width: 250px;
+            }
+        }
+
+        @media (min-width: 800px) {
+            .container {
+                max-width: 1200px;
+            }
+
+            .cards {
+                flex-direction: row;
+            }
+        }
+
+    </style>
+
+    <!-- 
+        - desktop first or graceful degradation; designing the desktop aspect first, then making adjustments to design our mobile view.
+                        The max-width is majorly used for this design.
+
+        - mobile first or progressive advancement; designing the mobile aspect first, then making adjustments (increasing our measurements)
+                        to design our desktop view.
+                    The min-width is majorly used for this design.
+    -->
+</head>
+<body>
+
+    <!-- 
+        max-width and min-width helps to make our contents responsive.
+            - max-width is majorly used when we are starting with desktop view designs. So that when minimizing or reducing the screen size, the mobile view 
+                will be quickly responsive and it'll be easier to make adjustments to our measurements targetting the mobile screen size.
+
+            - min-width is majorly used when we are starting with mobile view designs. So that, the desktop view 
+                will be quickly responsive and it'll be easier to make adjustments to our measurements targetting the desktop screen size.
+    -->
+    
+<!--     
+    <p style="background-color: green; width: 300px; padding: 10px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nemo suscipit doloribus rem dignissimos ducimus in ab recusandae error voluptates. Voluptatum, totam id ratione qui quasi expedita mollitia. Repudiandae, aliquam?
+    </p>
+
+    <p style="background-color: burlywood; max-width: 500px; padding: 10px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nemo suscipit doloribus rem dignissimos ducimus in ab recusandae error voluptates. Voluptatum, totam id ratione qui quasi expedita mollitia. Repudiandae, aliquam?
+    </p>
+
+    <p style="background-color: lightskyblue; min-width: 400px; padding: 10px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nemo suscipit doloribus rem dignissimos ducimus in ab recusandae error voluptates. Voluptatum, totam id ratione qui quasi expedita mollitia. Repudiandae, aliquam?
+    </p>
+-->
+
+    <div class="container">
+        <section class="hero">
+            <h2 class="hero_title normal">Reliable, efficient delivery</h2>
+            <h2 class="hero_title bold">Powered by Technology</h2>
+            <p class="hero_body">
+                Our Artificial Intelligence powered tools use millions of project data points 
+                to ensure that your project is successful
+            </p>
+        </section>
+      
+        <section class="cards">
+      
+          <div class="card cyan">
+            <h4 class="card_title">
+              Supervisor
+            </h4>
+            
+            <p class="card_body">
+              Monitors activity to identify project roadblocks
+            </p> 
+      
+            <div class="card_image">
+              <img src="../images/icon-supervisor.svg" alt="Supervisor icon">
+            </div>
+
+          </div>
+      
+          <div class="middle-box">
+      
+            <div class="card red">
+              <h4 class="card_title">
+                Team Builder
+              </h4>
+              
+              <p class="card_body">
+                Scans our talent network to create the optimal team for your project
+              </p>
+
+              <div class="card_image">
+                <img src="../images/icon-team-builder.svg" alt="Team Builder icon">
+              </div>
+              
+            </div>
+            
+            <div class="card orange">
+              <h4 class="card_title">
+                Karma
+              </h4>
+      
+              <p class="card_body">
+                Regularly evaluates our talent to ensure quality
+              </p>
+      
+              <div class="card_image">
+                <img src="../images/icon-karma.svg" alt="Karma icon">
+              </div>
+             
+            </div>
+      
+          </div>
+          
+          <div class="card blue">
+            <h4 class="card_title">
+              Calculator
+            </h4>
+            
+            <p class="card_body">
+              Uses data from past projects to provide better delivery estimates
+            </p>
+      
+            <div class="card_image">
+                <img src="../images/icon-calculator.svg" alt="Calculator icon">
+            </div>
+           
+          </div>
+          
+        </section>
+
+    </div>
+
+</body>
+</html>

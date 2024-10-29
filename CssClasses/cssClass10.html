@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity, Dropdown and Box-shadow</title>
+
+    <style>
+        header {
+            display: flex;
+            padding: 15px;
+            background-color: lavender;
+            justify-content: space-between;
+        }
+
+        nav a {
+            margin: 5px;
+        }
+
+        #dropdown {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .drop-btn {
+            padding: 8px;
+            cursor: pointer;
+            background-color: brown;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .drop-menu p {
+            border: 2px solid brown;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .drop-menu {
+            display: none;
+        }
+
+        #dropdown:hover .drop-menu {
+            display: block;
+        }
+
+        /* 
+            The box-shadow property takes the same value for the vertical and horizontal shadow,
+                the blur intensity, the spread and the color.
+        */
+
+        .pract {
+            width: 50vw;
+            height: 50vh;
+            background-color: burlywood;
+            border-top: 1px solid blue;
+            margin: 10px;
+            box-shadow: 5px 5px 50px yellow;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1> Logo </h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div id="dropdown">
+            <button class="drop-btn">Select an option </button>
+            <div class="drop-menu">
+                <p>Option 1</p>
+                <p>Option 2</p>
+                <p>Option 3</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="pract">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Tenetur eius hic itaque ea recusandae consequatur quod eum et ducimus reprehenderit 
+        veniam, commodi alias dolorum nostrum illo dolores fugiat molestias optio.
+    </div>
+    
+</body>
+</html>

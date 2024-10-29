@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 3</title>
+    <link rel="icon" href="./favicon.ico">
+</head>
+<body>
+    <h2 id="header">Web development</h2>
+  
+    <img src="" alt="">
+    <img src="../images/couple arguing.png" alt=""><br>
+
+    <!--  Links in html 
+      <a> tag defines a hyperlink
+      syntax: <a href="url"> Link text </a>
+      The href attribute specifies the link's destination, the link text is the part visible to the user. It musn't be a text, it can be an image, or something else.
+
+      There are two types of references: 
+        - Absolute and 
+        - relative reference.
+    -->
+      
+      <a href="./htmlClass1.html">Click here to view class 1</a> <br>
+      <!-- Absolute URL for google -->
+      <a href="https://www.google.com/">Click here to go to google</a> <br>
+      <!-- Relative url doesn't work -->
+      <a href="google.com" >Go to google</a> <br>
+      <a href="https://www.youtube.com/" id="google" class="link">
+        <img src="../image.png" alt="" height="200px" width="200px">
+      </a>
+      <a href="./htmlClass2.html" title="Redirects user to class 2" target="_blank'">
+        Click to go to class 2
+    </a><br> <br>
+    <!-- We can use mailto: inside the href attribute to create a link that opens the user's email program to let them send an email -->
+     <a href="mailto:georgev421@gmail.com">Send Mail</a>
+
+     <!-- class and id attributes are used to identify elements, id's are unique while classes are used to identify a group.
+     # is used to reference an id 
+     -->
+     <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti asperiores consequatur harum molestias laudantium dolor tempore, doloribus quidem officia molestiae atque ipsam quis culpa ducimus deleniti quod officiis ipsa est! Repellendus, consectetur fuga maxime at quod, minus quo est quisquam, placeat inventore suscipit illum magni repudiandae eveniet? Magnam, vel corrupti?
+     </p>
+     <hr>
+    <a href="#header">Go to header</a> <br>
+    <a href="./htmlClass2.html#address">Go to address section in class 2</a> <br>
+    <a href="#">Go to Top</a> <br>
+
+    <!-- An HTML Iframe is used to display a web page within a web page -->
+     <h3>Using HTML IFrames</h3>
+     <iframe src="./htmlClass1.html" title="Class 1 Web Page" width="70%"></iframe>
+
+
+     <h3>Using Iframes as target for a link</h3>
+     <iframe src="./htmlClass1.html" name="iframe" width="70%"></iframe>
+
+     <a href="https://blessiousdivine.com/" target="iframe">Take site into iframe</a>
+
+  
+</body>
+</html>

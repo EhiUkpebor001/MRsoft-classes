@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+
+    <style>
+
+        * {
+            color:red;
+        }
+
+        p {
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+
+        #yellow {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        In CSS, some selectors take precedence over others. If there are two or more CSS rules that points to the same element 
+            the selector with the highest specificity value will be applied. 
+    -->
+
+    <!-- 
+        The universal selector (*) is the least specific and selects the whole document.
+        The id selector (#) is more specific than the class selector (.)
+        Inline styling is more specific than the id selector. It has the greatest specificity. 
+    
+        Inline styling > id selectors > Classes/psuedo selectors > element selectors > universal selectors
+     
+        CALCULATION OF SPECIFICITY
+            universal - 0
+            element - 1
+            class/psuedo selectors - 10
+            id - 100
+            inline styling - 1000 
+    -->
+
+    <h1>Big game</h1>
+    <h1>Heading Two</h1>
+
+    <p class="green">Hello</p>
+
+    <p id="yellow"  class="green">
+        Paragraphs
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum fuga accusamus nemo, itaque ab deleniti quasi! 
+        Incidunt, ipsum totam autem est officia enim beatae, assumenda officiis inventore recusandae optio cupiditate.
+    </p>
+    
+</body>
+</html>

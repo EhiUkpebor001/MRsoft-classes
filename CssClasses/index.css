@@ -1,0 +1,74 @@
+/* 
+    CSS Comments: 
+        Comments help us explain our code, they are not displayed in the browser and are helpful when debugging your code at a future time.
+*/
+
+/* Examples: */
+/* Header */
+/* Navbar */
+/* Responsive  */
+/* Footer */
+
+/* CSS Selectors */
+
+/* 
+    Element selector: Where we use the element name (h1, p, button, li) to style the element.
+*/
+
+p {
+    font-size: 20px;
+    color: brown;
+    font-weight: 800;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* 
+    Id Selector: Uses the id attribute of an HTML element to select a specific element.
+        To select an element with the id the hash (#) character is used together with the ID Name.
+        ID's Must be unique.
+*/
+
+#stop {
+    color: white;
+    background-color: red;
+}
+
+#start {
+    color: white;
+    background-color: green;
+}
+
+#login {
+    background-color: green;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+#lock {
+    width: 10px;
+    height: 10px;
+}
+
+/* 
+    The Class Selector: Selects all HTML elements with a specific class attribute. 
+        classNames mustn't be unique.
+        To select an element with a class we use the period (.) character, followed by the className.
+*/
+.nav {
+    color: purple;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+}

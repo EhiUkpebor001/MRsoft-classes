@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Class 14</title>
+</head>
+<body>
+    <!-- 
+        CSS float property
+            This controls the positioning and formatting of content on the page. It positions an element either on the right side or left side of the container, letting text and other inline element to wrap around it. 
+
+            SYNTAX: 
+                float: none | left | right | initial | inherit;
+
+            - none -- is a defualt value.
+            - left/right -- floats the element to the left/right of the container.
+            - initial -- sets the property to it's defualt value
+            - inherit -- inherits the property from the parent element
+    -->
+
+    <div style="float: none; background-color: burlywood;">
+        <h2 style="float: inherit;"> Using the float property in CSS </h2>
+    </div>
+
+    <div class="left" style="background-color: cornflowerblue; float: left;">
+        <h2>This should be at the left</h2>
+        <img src="../images/image.png" alt="" width="300px" height="300px">
+    </div>
+
+    <div class="right" style="background-color: blueviolet; float: right;">
+        <h2>This should be at the right</h2>
+        <img src="../images/image.png" alt="" width="100px" height="100px">
+    </div>
+
+    <div class="none" style="background-color: darkgray; float: none;">
+        <h2>This has no float</h2>
+        <img src="../images/image.png" alt="" width="300px" height="300px">
+    </div>
+
+    <!-- 
+        CSS OVERFLOW PROPERTY
+            This specifies how to handle the content that overflows the boundaries of it's container. 
+            It works for only block-level elements with specified width and height. 
+            It can be used to 
+                - add scrollbars, 
+                - clip the content, etc.
+
+            SYNTAX: 
+                Overflow: visible | hidden | clip | scroll | auto | initial | inherit;
+            
+            - visible -- The content is not clipped and will overflow the container.
+            - hidden -- The content is clipped and the overflow is not visible. There are no scroll bars and the clipped content is not visible.
+            - clip -- The content is clipped when it proceeds outside the box.
+            - scroll -- A Scrollbar is added to the container only when the content overflows.
+            - auto -- This functions the same way as scroll. It adds a scrollbar to the container.
+            - initial, inherit -- same as the float property definition.
+
+    -->
+
+        <h2>CSS Overflow Property</h2>
+
+        <p style="background-color: lightgreen; padding: 10px; width: 200px; height: 200px; overflow: visible; float: right;">   
+           <b>This has an overflow of visible:</b> 
+           <br>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laborum quos fuga esse similique saepe dolorem asperiores dolore! Est blanditiis molestiae iusto, deserunt ipsum fuga corrupti modi atque, aut tempore soluta enim reprehenderit, illo optio neque recusandae assumenda explicabo! Dolore fuga aliquid maxime, provident ad obcaecati minus sint voluptatum magni eum voluptatem atque similique dicta, omnis nisi molestiae ipsum molestias error, hic ratione aspernatur ipsam officiis vitae laudantium? Sed temporibus vero eligendi doloremque eveniet assumenda in aliquam molestiae facere cupiditate quia amet, quod repellendus odit totam distinctio fugit qui quas nam sapiente ea quam repudiandae doloribus. Temporibus praesentium optio ipsam quibusdam ullam facilis in quisquam doloremque porro impedit blanditiis, ratione perspiciatis voluptas numquam cum nihil vero necessitatibus quaerat eveniet, distinctio quod amet! Laboriosam earum possimus cupiditate vitae doloribus assumenda dignissimos. Incidunt, quasi illum! Quae minus cumque cum molestiae amet? Labore, iste vel esse quod consectetur cumque quam atque sed recusandae velit eos ducimus autem maiores odit consequuntur aut nihil amet officiis quos ipsa deserunt! Fugit non consectetur nulla sequi ullam? A ipsam laudantium, eligendi accusantium cumque magnam tenetur officiis repudiandae saepe voluptates fuga provident dolor natus ea non molestiae earum et nihil recusandae. Cumque quo exercitationem nulla eos consequuntur voluptate delectus deleniti unde facilis. Dolores quaerat vel cumque tempora nisi rerum expedita nesciunt quis, quo quasi officia. Quos voluptate vel debitis nam perspiciatis? Omnis aspernatur ab et vero quam quas pariatur exercitationem fuga quaerat natus, alias porro facilis temporibus facere corporis ratione iure voluptatibus similique delectus, accusantium suscipit vel. Laborum adipisci, praesentium dolorem repellat quibusdam debitis culpa minus pariatur voluptate ut consectetur dolorum tempora odit quod asperiores! Quae, repellat illum possimus nam harum tempora tenetur, ipsa reprehenderit libero quod omnis optio aspernatur modi reiciendis ipsam mollitia, excepturi est impedit? Accusantium facere cum maxime magnam error. Tenetur sequi odio in cupiditate.
+        </p>
+
+        <p style="background-color: lavender; padding: 10px; width: 200px; height: 200px; overflow: hidden; text-align: center;">   
+            <b>This has an overflow of hidden:</b> 
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laborum quos fuga esse similique saepe dolorem asperiores dolore! Est blanditiis molestiae iusto, deserunt ipsum fuga corrupti modi atque, aut tempore soluta enim reprehenderit, illo optio neque recusandae assumenda explicabo! Dolore fuga aliquid maxime, provident ad obcaecati minus sint voluptatum magni eum voluptatem atque similique dicta, omnis nisi molestiae ipsum molestias error, hic ratione aspernatur ipsam officiis vitae laudantium? Sed temporibus vero eligendi doloremque eveniet assumenda in aliquam molestiae facere cupiditate quia amet, quod repellendus odit totam distinctio fugit qui quas nam sapiente ea quam repudiandae doloribus. Temporibus praesentium optio ipsam quibusdam ullam facilis in quisquam doloremque porro impedit blanditiis, ratione perspiciatis voluptas numquam cum nihil vero necessitatibus quaerat eveniet, distinctio quod amet! Laboriosam earum possimus cupiditate vitae doloribus assumenda dignissimos. Incidunt, quasi illum! Quae minus cumque cum molestiae amet? Labore, iste vel esse quod consectetur cumque quam atque sed recusandae velit eos ducimus autem maiores odit consequuntur aut nihil amet officiis quos ipsa deserunt! Fugit non consectetur nulla sequi ullam? A ipsam laudantium, eligendi accusantium cumque magnam tenetur officiis repudiandae saepe voluptates fuga provident dolor natus ea non molestiae earum et nihil recusandae. Cumque quo exercitationem nulla eos consequuntur voluptate delectus deleniti unde facilis. Dolores quaerat vel cumque tempora nisi rerum expedita nesciunt quis, quo quasi officia. Quos voluptate vel debitis nam perspiciatis? Omnis aspernatur ab et vero quam quas pariatur exercitationem fuga quaerat natus, alias porro facilis temporibus facere corporis ratione iure voluptatibus similique delectus, accusantium suscipit vel. Laborum adipisci, praesentium dolorem repellat quibusdam debitis culpa minus pariatur voluptate ut consectetur dolorum tempora odit quod asperiores! Quae, repellat illum possimus nam harum tempora tenetur, ipsa reprehenderit libero quod omnis optio aspernatur modi reiciendis ipsam mollitia, excepturi est impedit? Accusantium facere cum maxime magnam error. Tenetur sequi odio in cupiditate.
+        </p>
+         
+        <p style="background-color:lightcoral; padding: 10px; width: 200px; height: 200px; overflow: clip;">   
+            <b>This has an overflow of clip:</b> 
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laborum quos fuga esse similique saepe dolorem asperiores dolore! Est blanditiis molestiae iusto, deserunt ipsum fuga corrupti modi atque, aut tempore soluta enim reprehenderit, illo optio neque recusandae assumenda explicabo! Dolore fuga aliquid maxime, provident ad obcaecati minus sint voluptatum magni eum voluptatem atque similique dicta, omnis nisi molestiae ipsum molestias error, hic ratione aspernatur ipsam officiis vitae laudantium? Sed temporibus vero eligendi doloremque eveniet assumenda in aliquam molestiae facere cupiditate quia amet, quod repellendus odit totam distinctio fugit qui quas nam sapiente ea quam repudiandae doloribus. Temporibus praesentium optio ipsam quibusdam ullam facilis in quisquam doloremque porro impedit blanditiis, ratione perspiciatis voluptas numquam cum nihil vero necessitatibus quaerat eveniet, distinctio quod amet! Laboriosam earum possimus cupiditate vitae doloribus assumenda dignissimos. Incidunt, quasi illum! Quae minus cumque cum molestiae amet? Labore, iste vel esse quod consectetur cumque quam atque sed recusandae velit eos ducimus autem maiores odit consequuntur aut nihil amet officiis quos ipsa deserunt! Fugit non consectetur nulla sequi ullam? A ipsam laudantium, eligendi accusantium cumque magnam tenetur officiis repudiandae saepe voluptates fuga provident dolor natus ea non molestiae earum et nihil recusandae. Cumque quo exercitationem nulla eos consequuntur voluptate delectus deleniti unde facilis. Dolores quaerat vel cumque tempora nisi rerum expedita nesciunt quis, quo quasi officia. Quos voluptate vel debitis nam perspiciatis? Omnis aspernatur ab et vero quam quas pariatur exercitationem fuga quaerat natus, alias porro facilis temporibus facere corporis ratione iure voluptatibus similique delectus, accusantium suscipit vel. Laborum adipisci, praesentium dolorem repellat quibusdam debitis culpa minus pariatur voluptate ut consectetur dolorum tempora odit quod asperiores! Quae, repellat illum possimus nam harum tempora tenetur, ipsa reprehenderit libero quod omnis optio aspernatur modi reiciendis ipsam mollitia, excepturi est impedit? Accusantium facere cum maxime magnam error. Tenetur sequi odio in cupiditate.
+        </p>
+
+        <p style="background-color: lightpink; padding: 10px; width: 200px; height: 200px; overflow: scroll;">   
+            <b>This has an overflow of scroll:</b> 
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laborum quos fuga esse similique saepe dolorem asperiores dolore! Est blanditiis molestiae iusto, deserunt ipsum fuga corrupti modi atque, aut tempore soluta enim reprehenderit, illo optio neque recusandae assumenda explicabo! Dolore fuga aliquid maxime, provident ad obcaecati minus sint voluptatum magni eum voluptatem atque similique dicta, omnis nisi molestiae ipsum molestias error, hic ratione aspernatur ipsam officiis vitae laudantium? Sed temporibus vero eligendi doloremque eveniet assumenda in aliquam molestiae facere cupiditate quia amet, quod repellendus odit totam distinctio fugit qui quas nam sapiente ea quam repudiandae doloribus. Temporibus praesentium optio ipsam quibusdam ullam facilis in quisquam doloremque porro impedit blanditiis, ratione perspiciatis voluptas numquam cum nihil vero necessitatibus quaerat eveniet, distinctio quod amet! Laboriosam earum possimus cupiditate vitae doloribus assumenda dignissimos. Incidunt, quasi illum! Quae minus cumque cum molestiae amet? Labore, iste vel esse quod consectetur cumque quam atque sed recusandae velit eos ducimus autem maiores odit consequuntur aut nihil amet officiis quos ipsa deserunt! Fugit non consectetur nulla sequi ullam? A ipsam laudantium, eligendi accusantium cumque magnam tenetur officiis repudiandae saepe voluptates fuga provident dolor natus ea non molestiae earum et nihil recusandae. Cumque quo exercitationem nulla eos consequuntur voluptate delectus deleniti unde facilis. Dolores quaerat vel cumque tempora nisi rerum expedita nesciunt quis, quo quasi officia. Quos voluptate vel debitis nam perspiciatis? Omnis aspernatur ab et vero quam quas pariatur exercitationem fuga quaerat natus, alias porro facilis temporibus facere corporis ratione iure voluptatibus similique delectus, accusantium suscipit vel. Laborum adipisci, praesentium dolorem repellat quibusdam debitis culpa minus pariatur voluptate ut consectetur dolorum tempora odit quod asperiores! Quae, repellat illum possimus nam harum tempora tenetur, ipsa reprehenderit libero quod omnis optio aspernatur modi reiciendis ipsam mollitia, excepturi est impedit? Accusantium facere cum maxime magnam error. Tenetur sequi odio in cupiditate.
+            <img src="../images/lock.png">
+        </p>
+
+        <p style="background-color: lightgray; padding: 10px; width: 200px; height: 200px; overflow: auto;">   
+            <b>This has an overflow of auto:</b> 
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laborum quos fuga esse similique saepe dolorem asperiores dolore! Est blanditiis molestiae iusto, deserunt ipsum fuga corrupti modi atque, aut tempore soluta enim reprehenderit, illo optio neque recusandae assumenda explicabo! Dolore fuga aliquid maxime, provident ad obcaecati minus sint voluptatum magni eum voluptatem atque similique dicta, omnis nisi molestiae ipsum molestias error, hic ratione aspernatur ipsam officiis vitae laudantium? Sed temporibus vero eligendi doloremque eveniet assumenda in aliquam molestiae facere cupiditate quia amet, quod repellendus odit totam distinctio fugit qui quas nam sapiente ea quam repudiandae doloribus. Temporibus praesentium optio ipsam quibusdam ullam facilis in quisquam doloremque porro impedit blanditiis, ratione perspiciatis voluptas numquam cum nihil vero necessitatibus quaerat eveniet, distinctio quod amet! Laboriosam earum possimus cupiditate vitae doloribus assumenda dignissimos. Incidunt, quasi illum! Quae minus cumque cum molestiae amet? Labore, iste vel esse quod consectetur cumque quam atque sed recusandae velit eos ducimus autem maiores odit consequuntur aut nihil amet officiis quos ipsa deserunt! Fugit non consectetur nulla sequi ullam? A ipsam laudantium, eligendi accusantium cumque magnam tenetur officiis repudiandae saepe voluptates fuga provident dolor natus ea non molestiae earum et nihil recusandae. Cumque quo exercitationem nulla eos consequuntur voluptate delectus deleniti unde facilis. Dolores quaerat vel cumque tempora nisi rerum expedita nesciunt quis, quo quasi officia. Quos voluptate vel debitis nam perspiciatis? Omnis aspernatur ab et vero quam quas pariatur exercitationem fuga quaerat natus, alias porro facilis temporibus facere corporis ratione iure voluptatibus similique delectus, accusantium suscipit vel. Laborum adipisci, praesentium dolorem repellat quibusdam debitis culpa minus pariatur voluptate ut consectetur dolorum tempora odit quod asperiores! Quae, repellat illum possimus nam harum tempora tenetur, ipsa reprehenderit libero quod omnis optio aspernatur modi reiciendis ipsam mollitia, excepturi est impedit? Accusantium facere cum maxime magnam error. Tenetur sequi odio in cupiditate.
+         </p>
+
+        <p style="background-color: lightgray; padding: 10px; width: 200px; height: 200px; overflow: initial;">   
+            <b>This has an overflow of initial:</b> 
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laborum quos fuga esse similique saepe dolorem asperiores dolore! Est blanditiis molestiae iusto, deserunt ipsum fuga corrupti modi atque, aut tempore soluta enim reprehenderit, illo optio neque recusandae assumenda explicabo! Dolore fuga aliquid maxime, provident ad obcaecati minus sint voluptatum magni eum voluptatem atque similique dicta, omnis nisi molestiae ipsum molestias error, hic ratione aspernatur ipsam officiis vitae laudantium? Sed temporibus vero eligendi doloremque eveniet assumenda in aliquam molestiae facere cupiditate quia amet, quod repellendus odit totam distinctio fugit qui quas nam sapiente ea quam repudiandae doloribus. Temporibus praesentium optio ipsam quibusdam ullam facilis in quisquam doloremque porro impedit blanditiis, ratione perspiciatis voluptas numquam cum nihil vero necessitatibus quaerat eveniet, distinctio quod amet! Laboriosam earum possimus cupiditate vitae doloribus assumenda dignissimos. Incidunt, quasi illum! Quae minus cumque cum molestiae amet? Labore, iste vel esse quod consectetur cumque quam atque sed recusandae velit eos ducimus autem maiores odit consequuntur aut nihil amet officiis quos ipsa deserunt! Fugit non consectetur nulla sequi ullam? A ipsam laudantium, eligendi accusantium cumque magnam tenetur officiis repudiandae saepe voluptates fuga provident dolor natus ea non molestiae earum et nihil recusandae. Cumque quo exercitationem nulla eos consequuntur voluptate delectus deleniti unde facilis. Dolores quaerat vel cumque tempora nisi rerum expedita nesciunt quis, quo quasi officia. Quos voluptate vel debitis nam perspiciatis? Omnis aspernatur ab et vero quam quas pariatur exercitationem fuga quaerat natus, alias porro facilis temporibus facere corporis ratione iure voluptatibus similique delectus, accusantium suscipit vel. Laborum adipisci, praesentium dolorem repellat quibusdam debitis culpa minus pariatur voluptate ut consectetur dolorum tempora odit quod asperiores! Quae, repellat illum possimus nam harum tempora tenetur, ipsa reprehenderit libero quod omnis optio aspernatur modi reiciendis ipsam mollitia, excepturi est impedit? Accusantium facere cum maxime magnam error. Tenetur sequi odio in cupiditate.
+         </p>
+
+</body>
+</html>

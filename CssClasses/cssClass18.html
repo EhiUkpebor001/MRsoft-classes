@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations, Transitions and Transforms</title>
+
+    <style>
+        .transform {
+            width: 300px;
+            height: 300px;
+            background-color: navy;
+            cursor: pointer;
+            transition: all 1s ease 0.5s;
+        }
+
+        .transform:hover {
+            transform: translate(100px, 100px) rotate(200deg) scale(2);
+            background-color: purple;
+        }
+
+        .skew {
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+            /* background-image: url(../images/shop.jpeg); */
+            background-size: cover;      
+        }
+
+        .skew:hover {
+            transform: skewY(120deg);
+        }
+
+        .btn {
+            padding: 15px;
+            background-color: darkslategrey;
+            font-size: 20px;
+            font-weight: bold;
+            color: aliceblue;
+            cursor: pointer;
+            margin-left: 50%;
+            transition: all 1s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: scale(1.5);
+            /* transition: all 1s ease-in-out; */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+        CSS Animations, Transitions and Transforms
+            CSS provides a way for us to create engaging and visually appealing web designs.
+
+            CSS Transform: 
+                This property allows us to change the position, scale, rotation and skew of an element. 
+                It doesn't affect the document flow.
+
+            Common Transform functions:
+                -- translate(x, y) - This moves the element along the X and Y axis.
+                -- rotate(angle) - This rotates the element by a given degree.
+                -- scale(x, y) - This scales the element horizontally and vertically.
+                -- skew(x, y) - This skews the element by X and Y angles.
+    -->
+
+        <div class="transform"></div>
+        <br>
+        <br>
+        <div class="skew"></div>
+
+
+        <!-- 
+            CSS Transitions: 
+                The transition property allows us to smoothly change CSS properties over time.
+                It's ideal for hover effects and small state-dependent changes.
+
+                SYNTAX:
+                    transition: property duration timing-function delay; 
+
+                -- property - This is the CSS property you want to animate. E.g; background-color, transform, color, all (i.e all targeted properties of the element).
+                -- duration - How long the transition should last. E.g; 1s, 700ms, etc.
+                -- timing-function - The speed curve of the transition. E.g; ease, linear, ease-in, etc.
+                -- delay - This is the time before the transition starts.
+
+                Common Timing-Function:
+                    linear - Constant speed from start to finish.
+                    ease - starts slow, then normal, then ends slow.
+                    ease-in - starts slowly, then speeds up.
+                    ease-out - starts fast, then slows down.
+                    ease-in-out - Combines ease-in and ease-out.
+                    cubic-bezier - Here we control the curve with four points. E.g; cubic-bezier(0.4, 0, 0.5, 1).
+        -->
+
+        <button class="btn">Get Started</button>
+    
+</body>
+</html>

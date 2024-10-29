@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS COLOR FORMAT</title>
+
+    <style>
+        body {
+            background-color: violet;
+            background-image: url("../images/shop.jpeg"), url("../images/couple\ arguing.png");
+            background-repeat: no-repeat;
+        }
+
+        h2 {
+            color: blue;
+            background-color: rgba(173, 216, 230, 0.204);
+            display: inline;
+            border-bottom: 3px double blue;
+        }
+
+        /* 
+            Colors in CSS: Can be specified using 
+                - RGB Values, 
+                - RGBA Values,
+                - HSL Values, 
+                - HSLA Values, 
+                - HEX Values. 
+        */
+
+        #solid {
+            border: 2px solid blue;
+            border-radius: 20px;
+        }
+
+        #dotted {
+            border-width: 2px;
+            border-style: dotted;
+            border-color: green;
+        }
+
+        #dashed {
+            border: 2px dashed red;
+        }
+
+        #btn {
+            border: none;
+        }
+
+        button {
+            border-radius: 50px;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        #shop {
+            padding: 30px;
+            background-image: url("../images/shop.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        Company <span style="color: yellow;"> Name</span>
+    </h2>
+
+    <h3 style="color: rgb(255, 99, 71);">
+        Welcome
+    </h3>
+
+    <h3 style="color: rgb(47, 0, 255);">
+        Welcome
+    </h3>
+
+    <h4 style="color: tomato;">
+        To Class
+    </h4>
+
+    <h3 style="color: #ff6347;">
+        Today
+    </h3>
+
+    <h2 style="background-color: hsl(9, 100%, 64%);">
+        Hello Ehiremhen
+    </h2>
+
+    <!-- 
+        CSS color formats with opacity
+    -->
+
+    <h1 style="background-color: white; padding: 20px;"> 
+        CSS COLORS WITH OPACITY 
+    </h1>
+
+    <p style="background-color: rgba(255, 99, 71, 0.701);">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloribus fuga quae alias corporis? Corporis ratione consectetur inventore laboriosam obcaecati quae, rem numquam ipsum quo pariatur recusandae ipsa libero maxime?
+    </p>
+
+    <p style="background-color: hsla(9, 100%, 64%, 0.206);">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi explicabo quisquam vitae sequi quasi fugit ipsam at facilis sint provident, nihil fuga. Quis sit in ea assumenda atque debitis quaerat.
+    </p>
+
+    <!-- CSS Borders -->
+
+    <h3 style="border-bottom: 2px dashed red; display: inline;">
+        Using Borders in CSS
+    </h3>
+    
+    <p id="solid">This is a solid border</p>
+    <p id="dotted">This is a Dotted border</p>
+    <p id="dashed">This is a Dashed border</p>
+    <p style="border: 3px double purple;">This is a double border</p>
+    <p style="border: 10px groove rgb(128, 0, 23);">This is a Groove border</p>
+    <p style="border: 8px ridge rgb(28, 0, 23);">This is a Ridge border</p>
+    <p style="border-width: 4px; border-style: dashed dotted double solid;">
+        This is a mixed border
+    </p>
+
+    <button id="btn">Learn More</button>
+    <button>Read More</button>
+
+    <h2>Background Images</h2>
+    <div id="shop">
+        <h2>Welcome to our shop</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta unde nihil temporibus doloribus reprehenderit corrupti labore odio sint nobis fugit?
+        </p>
+    </div>
+</body>
+</html>
