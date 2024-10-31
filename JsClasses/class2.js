@@ -3,7 +3,7 @@
   1) Window object: The window object represents a window in the browser. 
         Some methods in the window object include;
             - alert()
-            - prompt(): Used to receive information from the user.
+            - prompt(): Used to receive information from the user. It returns the user input as string by default, even if it's an integer the user inputted.
             - confirm(): Uses the 'ok' button for YES and 'cancel' button for NO.
 */
 
