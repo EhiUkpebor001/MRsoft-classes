@@ -18,6 +18,17 @@
             - Displaying pop-ups and dialog boxes, etc.
 */
 
+/*
+    Console is used for debugging.
+        TYPES OF CONSOLE FUNCTIONS
+            1) console.log()
+            2) console.error()
+            3) console.warn()
+            4) console.clear()
+            5) console.count()
+*/
+
+
 // Single line Comment
 
 // Using Variables in Javascript : We can use the var, let and const keywords to create variables.
