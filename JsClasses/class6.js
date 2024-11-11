@@ -170,3 +170,46 @@ console.log(result);
 //         console.log("See you next time");
 //     }
 // } while(false);
+
+
+/*
+    MORE ON LOOPS
+    1)  For In loop: This is used to loop through the properties of an object. This is ES6, modern javascript.
+
+        SYNTAX:
+
+            const objectName = {
+                properties: propertyValue,
+                properties: propertyValue
+            };
+
+            for(let 'variableName' in 'objectName') {
+                code execution;
+            }
+
+        Example: 
+            'person' is an object, with properties such as 'name', 'age', 'gender', 'city, and values for the properties; 'Kelechi', 28, 'male', 'London' respectively.
+*/
+const person = {
+    name: "Kelechi",
+    age: 28,
+    gender: "male",
+    city: "London"
+};
+
+for(let key in person) {
+    console.log(key);           // This output only the properties.
+    console.log(key, ":", person[key]);      // This gives the properties, and the values.
+}
+
+/*
+    2) For of loop: This is used to iterate over the elements of an iterable object. E.g; Arrays, Strings, etc.
+                    Arrays are also called lists.
+*/
+
+const listedFruits = ["mango", "orange", "apple", "grape"];
+console.table(listedFruits);
+
+for (let fruit of listedFruits) {
+    console.log("I love", fruit);
+}
