@@ -80,7 +80,7 @@ for(let i = 10; i >= 0; i--){
 
 // SOLUTION
     let userName = prompt("Enter your name: ");
-    let welcome = alert(`${userName}, welcome to my guessing game!`);
+    alert(`${userName}, welcome to my guessing game!`);
     let game = confirm("If you want to continue click 'OK'. If not, click 'Cancel'.");
     if (game) {
         let gameAnswer = Math.floor(Math.random() * 20) + 1;    // Generates game answer once
