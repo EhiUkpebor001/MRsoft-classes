@@ -31,12 +31,26 @@
 
 // Single line Comment
 
-// Using Variables in Javascript : We can use the var, let and const keywords to create variables.
+/*
+    Using Variables in Javascript 
+    
+        We can use the var, let and const keywords to create variables.
+        Variables are used to store data to be referenced and manipulated in a computer program.
+        They also provide a way of labelling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves.
+        Variables are like containers that hold data.
+
+*/
+
 
 // ES5
 var a = 20;
 
-// let and const keywords are part of ES6 Javascript.
+/*
+    let and const keywords are part of ES6 Javascript.
+        --  The const keyword is used to declare a constant variable. i.e. The value in the variable CANNOT be changed or reassigned in the program.
+        --  The let keyword is used to declare a dynamic variable. i.e. The value in the variable CAN be changed or reassigned in the program.
+*/
+
 // Semi-colons are used to end js statements.
 let b = 40;
 const c = "George";
