@@ -45,3 +45,11 @@ console.table(colors);
 
 // The length property in the array gives the total number of items present in the array, this is different from the index.
 console.log(colors.length);
+
+
+//  To Print out the content of an array, we use the for-loop
+for(let i = 0; i < colors.length; i++) {
+    console.log(`I love ${colors [i]} cars.`);
+    console.log(`I love ${colors} cars.`);
+};
+

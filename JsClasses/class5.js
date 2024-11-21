@@ -161,3 +161,19 @@ for(let i = 10; i >= 0; i--){
         }
     } while(false); // This will only run once since `while(false)` stops the loop
 */
+
+
+//  NESTED LOOP: This is a loop inside another loop.
+
+// example;
+let numbers = "";
+for(let i = 0; i < 10; i++) {
+    for(let j = 1; j < 10; j++) {
+        if (j != 9) {
+            numbers += `${i}.${j}, `;
+        } else {
+            numbers += `${i}.${j}, 10. `;
+        }
+    }
+}
+console.log(numbers);
