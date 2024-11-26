@@ -92,3 +92,9 @@ console.table(fruits);
 console.log("\nThe concat() method: ");
 const colorFruits = colors.concat(fruits);
 console.table(colorFruits);     // Notice index 3 is missing because we 'deleted' it in the delete keyword example.
+
+//      11. sort(): It is used to sort array elements in ascending or descending orders.
+console.log("\nThe sort() method: ");
+let fruitsSort = fruits.sort();
+console.log(fruitsSort);
+

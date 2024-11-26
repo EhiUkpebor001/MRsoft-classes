@@ -2,6 +2,8 @@
 
 let str = "Welcome to Javascript";
 let newString = "Wel,come to, Java,script";
+let singleWord = "Ehiremhen";
+let letterArray = singleWord.split("");
 
 /*
     1) length property: It is used to get the length of a string. 
@@ -15,11 +17,14 @@ console.log(str.length);
                     The ", " in the split method, tells it to split the string where ever there is a comma(,) and space( ).
                     If it's only "," in the split method, it means it will only split the string where ever there is a comma(,).
                     This creates a new array, comprising of each split words.
+                    A delimiter is a seperator. For instance, in the console.log below, the delimiters are; space for line23, comma for line24, etc.
 */
 console.log("\nThe split() method in string: ");
 console.log(str.split(" "), "\n");
 console.log(newString.split(","), "\n");
-console.log(newString.split(", "));
+console.log(newString.split(", "), "\n");
+// console.log(singleWord.split(""));       // If there is no delimiter specified, each letter is seperated into an array element.
+console.log(letterArray);
 
 /*
     3) replace method: It is used to replace matching texts.
@@ -91,3 +96,16 @@ let str1 = "Hi, there";
 let str2 = str1.concat(" ", str);
 console.log(str2);
 
+
+// Cont. of ARRAY METHODS
+
+/*
+    12) sort(): It is used to sort array elements in ascending or descending orders.
+*/
+console.log("\nThe sort() method: ");
+let letterSort = letterArray.sort();
+console.log(letterSort);
+
+console.log("\nThe join() method: ");
+let newLetter = letterSort.join("");
+console.log(newLetter);
