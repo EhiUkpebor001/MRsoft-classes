@@ -2,7 +2,7 @@
 
 /*
     1)  Date: Used to work with dates and times. It uses the date and time of our device.
-        methods: getDate(), getMonth(), getFullYear(), getHours(), etc.
+            methods: getDate(), getMonth(), getFullYear(), getHours(), etc.
 */
 
 const today = new Date();
@@ -47,17 +47,17 @@ console.log(`We are in the month of ${monthArray[months.getMonth()]}`);
 
 /*
         2)  Math: It provides in-built mathematical functions and constants.
-            properties: 
-                --  pi, 
-                --  E meaning exponentials, etc.
-            methods: 
-                -- abs()        meaning Absolute.   It changes every negative value/number to a positive number.
-                -- sqrt()       meaning Square root.
-                -- random()     used to get random numbers between 0 and 1. These numbers are decimals.
-                -- floor()      used to ROUND DOWN a number to the nearest integer.
-                -- ceil()       used to ROUND UP a number to the nearest integer.
-                -- round()      used to ROUND a number to the nearest whole number. It is more accurate in normal maths calculation, 
-                                                but in programming, it is accurate depending on its use case.
+                properties: 
+                    --  pi, 
+                    --  E meaning exponentials, etc.
+                methods: 
+                    -- abs()        meaning Absolute.   It changes every negative value/number to a positive number.
+                    -- sqrt()       meaning Square root.
+                    -- random()     used to get random numbers between 0 and 1. These numbers are decimals.
+                    -- floor()      used to ROUND DOWN a number to the nearest integer.
+                    -- ceil()       used to ROUND UP a number to the nearest integer.
+                    -- round()      used to ROUND a number to the nearest whole number. It is more accurate in normal maths calculation, 
+                                                    but in programming, it is accurate depending on its use case.
 */
 
 console.log("\nMath.PI = ", Math.PI);
@@ -111,3 +111,19 @@ function randInt(n) {
 console.log("\nRandom numbers between 1 and 100 dependent on the input: ");
 randInt(5);
 randInt(10);
+
+
+
+/*
+        3)  Number:  It represents numerical data.
+                methods: 
+                    -- toString()         It converts the numerical value to a string.
+                    -- toFixed()          It rounds the numerical value to a specified DECIMAL PLACES.
+                    -- toPrecision()      It rounds the numerical value to a specified SIGNIFICANT DIGITS.
+*/
+
+console.log("\nMethods in the 'Number' built-in object: ");
+let num = 123.456;
+console.log("toString() = ", num.toString());            //  Converts to string ("123.456")
+console.log("toFixed(2) = ", num.toFixed(2));            //  Rounds to 2 decimal places (123.46)
+console.log("toPrecision(4) = ", num.toPrecision(4));        //  Rounds to 4 significant places (123.5)

@@ -98,3 +98,27 @@ console.log("\nThe sort() method: ");
 let fruitsSort = fruits.sort();
 console.log(fruitsSort);
 
+//      12. reverse(): It is used to reverse the elements in an array.
+
+/*
+        Class exercise 1
+            Create an array of fruits, then put in 5 fruits. Afterwards, use the reverse() function, to reverse their order.
+*/
+console.log("\nThe reverse() method, Example 1: ");
+let fruitsArray = ['orange', 'apple', 'grape', 'pineapple', 'lemon'];
+console.table(fruitsArray);
+
+let revFruits = fruitsArray.reverse();
+console.table(revFruits);
+
+/*
+        Class exercise 2
+            Reverse the string "water".
+*/
+console.log("\nThe reverse() method, Example 2: ");
+let str = "water";
+let strArr = str.split("");
+let strArrRev = strArr.reverse();
+let newStr = strArrRev.join("");
+
+console.log(`'${str}' its reverse is '${newStr}'`);
