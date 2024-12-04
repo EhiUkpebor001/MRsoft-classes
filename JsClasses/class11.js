@@ -98,7 +98,19 @@ console.log("\nThe sort() method: ");
 let fruitsSort = fruits.sort();
 console.log(fruitsSort);
 
-//      12. reverse(): It is used to reverse the elements in an array.
+/*
+        12. fill(): This method fills an array with a given value.
+                  This method is destructive, as it overwrites the original array, if the start and end position isn't specified, all elements would be filled.
+*/
+console.log("\nThe fill() method without specifying the start and end position: ");
+fruits.fill("Test");
+console.table(fruits);
+
+console.log("\nThe fill() method when the start and end position is specified: ");
+colorFruits.fill("Color", 1, 8);
+console.table(colorFruits);
+
+//      13. reverse(): It is used to reverse the elements in an array.
 
 /*
         Class exercise 1

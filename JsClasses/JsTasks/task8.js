@@ -21,6 +21,8 @@
 
 // console.log(Math.max(20, 25, 50, 40, 281));
 
+
+//  Brute force: This isn't the most optimal, because it increased the time complexity to O(n^2), instead of O(n).
 const neetCoin = (prices) => {
     let buyStock;
     let sellStock;
@@ -50,3 +52,28 @@ const neetCoin = (prices) => {
 
 neetCoin([7, 1, 5, 3, 6, 4]);
 neetCoin([7, 6, 4, 3, 1]);
+
+
+// Solution 2 - Two Pointers Solution (Most optimal method - O(n)) : The solution, simultaneously checks both sides, the left and right side.
+function maxPrice (prices) {
+    let left = 0;
+    let right = 1;
+    let profit = 0;
+    
+    while (right < prices.length) {
+        if (prices[left] < prices[right]) {
+            let profitEqn = prices[right] - prices[left];
+            profit = Math.max(profit, profitEqn);
+        } else {
+            left = right;
+        };
+        right ++;
+    };
+    return profit;
+};
+
+let prices1 = [7, 1, 5, 3, 6, 4];
+let prices2 = [7, 6, 4, 3, 1];
+
+console.log("\nTwo Pointers solution:\n", maxPrice(prices1));
+console.log("", maxPrice(prices2));

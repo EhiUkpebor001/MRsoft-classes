@@ -33,7 +33,7 @@
 // console.log(hasDuplicate(nums2)); // Output: true
 
 
-// Another Solution - BRUTE FORCE; The parent for-loop (i) checks each number in the child for-loop (j) one by one, till a 
+// Another Solution - BRUTE FORCE ~~ O(n^2); The parent for-loop (i) checks each number in the child for-loop (j) one by one, till a 
 //                                  duplicate is found.
 
 const hasDuplicate2 = (nums) => {

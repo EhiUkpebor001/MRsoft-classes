@@ -52,8 +52,25 @@ console.log(__dirname, __filename);
                         --  console.table, etc.
 
 
-            2)  setTimeout() : This just calls a function after a specified number of milliseconds.
+            2)  setTimeout() : This just calls a function after a specified number of milliseconds. It is a callback function. It takes in two things;
+                            --  The function that does something
+                            --  The particular time
+
+
+            3)  setInterval() : This just runs a function at intervals after a specified number of milliseconds. It is a callback function. It takes in two things;
+                            --  The function that does something
+                            --  The particular time at interval the function should run.    
+                            
+            4)  clearInterval() : This is used to stop the setInterval loop.
 */
+
+/* --------first format--------
+    const func = () => {console.log('Executed after 3 seconds')};
+
+    setTimeout(func, 3000);
+*/
+
+// --------second format----------
 setTimeout( () => {
     console.log('\nExecuted after 3 seconds')
 }, 3000);
@@ -63,6 +80,7 @@ setTimeout( () => {
 // }, 3000);
 
 
+// we assigned the setInterval function to the variable (interval) so it'll have an ID.
 const interval = setInterval( () => {
     console.log('Executed every 3 seconds')
 }, 3000);
