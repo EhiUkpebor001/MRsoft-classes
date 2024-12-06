@@ -57,29 +57,35 @@
 
 // Correction ------ Two pointers solution
 function threeSum2 (numb) {
-    numb.sort((a, b) => a - b);
+    numb.sort((a, b) => a - b); // Sort the array
     const result = [];
 
     for (let i = 0; i < numb.length; i++) {
-        if (numb[i] > 0) break;
-        if (i > 0 && numb[i] === numb[i - 1]) continue;
+        if (numb[i] > 0) break; // If the current number is positive, break (no triplet can sum to 0)
+        if (i > 0 && numb[i] === numb[i - 1]) continue; // Skip duplicate values for the first element
 
         let left = i + 1;
         let right = numb.length - 1;
 
         while (left < right) {
             let sum = numb[i] + numb[left] + numb[right];
+
             if (sum > 0) {
-                right --;
+                right --;   // Decrease the right pointer to get a smaller sum
             } else if (sum < 0) {
-                left ++;
+                left ++;    // Increase the left pointer to get a larger sum
             } else {
-                result.push([numb[i], numb[left], numb[right]]);
+                result.push([numb[i], numb[left], numb[right]]);    // Found a valid triplet
                 left ++;
                 right --;
 
+                // Skip duplicates for the left and right pointers
                 while (left < right && numb[left] === numb[left - 1]) {
                     left ++;
+                };
+
+                while (left < right && numb[right] === numb[right + 1]) {
+                    right --;
                 };
             };
         };
