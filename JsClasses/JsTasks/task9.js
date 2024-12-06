@@ -13,6 +13,6 @@
                 Output: [7]
 */
 
-const frequentElements = (numsArray) => {
+const frequentElements = (numsArray, k) => {
     
 }

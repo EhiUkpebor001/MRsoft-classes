@@ -93,10 +93,37 @@ console.log("\nThe concat() method: ");
 const colorFruits = colors.concat(fruits);
 console.table(colorFruits);     // Notice index 3 is missing because we 'deleted' it in the delete keyword example.
 
-//      11. sort(): It is used to sort array elements in ascending or descending orders.
-console.log("\nThe sort() method: ");
+//      11. sort(): It is used to sort array elements in ascending or descending orders and alphabetically.
+console.log("\nThe sort() method for alphabets: ");
 let fruitsSort = fruits.sort();
 console.log(fruitsSort);
+
+let num1 = [2, 1, 4, 9, 5];
+console.log("\nThe sort() method for numbers: ");
+console.table(num1.sort());
+
+let num2 = [40, 100, 1, 5, 25, 10];
+console.log("\nThe issue with sort() method for numbers: ");
+console.table(num2.sort());
+
+/*
+      By default, the sort() function sorts values as strings.
+      This works well for strings ("Apple" comes before "Banana").
+      If numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+      Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+      This problem can be fixed by using;
+            -- a compare function,
+            -- an arrow function.
+*/
+
+//          Using the Compare function:
+console.log("\nResolving the sort() method issue for numbers, with a 'compare' function: ");
+console.table(num2.sort(function(a, b){return a - b}));
+
+//          Using the Arrow function:
+console.log("\nResolving the sort() method issue for numbers, with an arrow function: ");
+console.table(num2.sort((a, b) => b - a));      //    For descending order
 
 /*
         12. fill(): This method fills an array with a given value.
