@@ -32,9 +32,9 @@
         let nums1 = 0;
         let nums2 = nums.length - 1;
         let nums3 = nums.length - 2;
+        let triplet = {};
         
-        while (nums1 < nums2 && nums2 < nums3) {
-            let triplet = {};
+        while (nums1 < nums3 && nums1 < nums2) {
             let sum = nums[nums1] + nums[nums2] + nums[nums3];
             if (sum == 0) {
                 sumArr = new Array (nums[nums1], nums[nums2], nums[nums3]);
@@ -46,7 +46,7 @@
             } else {
                 nums2 ++; 
                 nums3 ++;
-            };
+            }; 
             console.log(Object.keys(triplet));
         };
     };
@@ -79,7 +79,7 @@ function threeSum2 (numb) {
                 left ++;
                 right --;
 
-                // Skip duplicates for the left and right pointers
+                // Skip duplicates for the left and right pointers (i.e duplicates for the second and third elements)
                 while (left < right && numb[left] === numb[left - 1]) {
                     left ++;
                 };

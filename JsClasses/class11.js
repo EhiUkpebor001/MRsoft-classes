@@ -137,7 +137,14 @@ console.log("\nThe fill() method when the start and end position is specified: "
 colorFruits.fill("Color", 1, 8);
 console.table(colorFruits);
 
-//      13. reverse(): It is used to reverse the elements in an array.
+//      13. map(): This method helps us to affect each item in an array.
+console.log("\nThe map() method: ");
+let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(num => num * num);
+console.log(`The squares of ${numbers} using the 'map()' method are ${squares} \n`);
+console.table(squares);
+
+//      14. reverse(): It is used to reverse the elements in an array.
 
 /*
         Class exercise 1
