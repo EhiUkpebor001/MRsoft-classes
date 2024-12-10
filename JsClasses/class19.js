@@ -68,7 +68,7 @@ try {
             
         --  Endpoints:  Endpoints are specific URLs (Universal Resource Links) or URIs (Universal Resource Identifiers) where the API can be accessed.
                     Each endpoint corresponds to a specific functionality or resource that the API provides.
-                        Example:    https://random.imagecdn.app/500/150     this endpoint can be used for fetching random images.
+                        Example:    https://random.imagecdn.app/500/150     this endpoint can be used for fetching random images per call.
 
         --  Request and Responses:  
                 Request:    A client (such as; a web browser or an application) makes a request to an API endpoint.
