@@ -79,3 +79,6 @@ try {
                                 --  headers,
                                 --  and ususally a body containing the requested data or confirmation of an action.
 */
+
+
+// Look up on 'Higher Order Functions' with examples

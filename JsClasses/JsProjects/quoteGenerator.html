@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+
+    <style>
+
+        body {
+            background-color: plum;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .platform {
+            margin-top: 140px;
+            border: 5px solid rgb(16, 104, 115);
+            border-radius: 15px;
+            padding: 30px;
+            line-height: 2em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            background-color: aliceblue;
+            max-width: 500px;
+            width: 80vw;
+        }
+
+        #quotes {
+            font-size: larger;
+            font-weight: 700;
+        }
+
+        #author {
+            font-size: medium;
+            color: grey;
+            font-weight: 600;
+        }
+
+        button {
+            border-radius: 25px;
+            color: rgb(12, 75, 48);
+            font-weight: 800;
+            padding: 10px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="platform">
+            <p id="quotes">
+                "Quotes goes here..."
+            </p>
+            <p id="author">Author</p>
+            <button id="generate">New Quote</button>
+        </div>
+    </div>
+    
+
+    <script>
+        const quote = document.querySelector("#quotes");
+        const author = document.querySelector("#author");
+        const generateBtn = document.querySelector("#generate");
+
+        generateBtn.addEventListener("click", generator);
+        
+        function generator() {
+            fetch("https://api.quotable.io/random")
+            .then (res => res.json())
+            .then(data => {
+                quote.textContent = `"${data.content}"`;
+                author.textContent = data.author;
+            });
+        };
+
+        </script>
+</body>
+</html>
