@@ -62,10 +62,12 @@
             gallerySect.style.marginTop = "0.5em";
 
             // -- Using Query Selector All
-            const galleryFolder = document.querySelectorAll('#gallery a');
-            
+            const galleryFolder = document.querySelectorAll('.gallery a');
+
             for (let i = 0; i < galleryFolder.length; i++) {
-                galleryFolder.style.textDecoration = "none";
+                galleryFolder[i].style.textDecoration = "none";
+                galleryFolder[i].style.paddingRight = "1em";
+                galleryFolder[i].style.color = "green";
             }
 
     </script>
