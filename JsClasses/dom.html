@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="header">Introduction to DOM</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section id="social">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Whatsapp</a>
+    </section>
+
+    <section class="gallery">
+        <a href="#">Sports</a>
+        <a href="#">Cooking</a>
+        <a href="#">Lectures</a>
+    </section>
+
+
+    <script>
+        /*
+            DOM (Document Object Model): represents all page contents as objects that can be modified.
+            The document object is the main entry point to the page. 
+            We can change anything on the page using it.
+        */
+
+        document.body.style.backgroundColor = "lightgreen";
+
+        // SELECTING ELEMENTS
+            // -- Using ID names
+            const head = document.getElementById('header');
+            head.style.color = "purple";
+            head.style.fontStyle = "italic";
+            head.style.fontSize = "3em";
+
+            // -- Using Query Selector
+            const navbar = document.querySelector('nav');
+            navbar.style.backgroundColor = "orange";
+            navbar.style.padding = "0.4em";
+
+            const socialsLink = document.querySelector('#social');
+            socialsLink.style.backgroundColor = "grey";
+            socialsLink.style.marginTop = "0.5em";
+            socialsLink.style.padding = "0.4em";
+
+            const socials = document.querySelector('#social a');
+            socials.style.textDecoration = "none";      // This only has effect on the first 'a tag element', that's why we use the querySelectorAll
+
+            const gallerySect = document.querySelector('.gallery');
+            gallerySect.style.backgroundColor = "orange";
+            gallerySect.style.padding = "0.4em";
+            gallerySect.style.marginTop = "0.5em";
+
+            // -- Using Query Selector All
+            const galleryFolder = document.querySelectorAll('#gallery a');
+            
+            for (let i = 0; i < galleryFolder.length; i++) {
+                galleryFolder.style.textDecoration = "none";
+            }
+
+    </script>
+    
+</body>
+</html>

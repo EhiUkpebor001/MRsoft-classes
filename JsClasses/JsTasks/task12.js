@@ -12,3 +12,45 @@
         Input: height = [2,2,2]
         Output: 4
 */
+ 
+const waterContainer = (heights) => {
+    
+    let maxAmount = 0;
+    
+    for (let i = 0; i < heights.length; i++) {
+        for (let j = i + 1; j < heights.length; j++) {
+            let waterAmountEqn = Math.min(heights[i], heights[j]) * (j - i);
+            maxAmount = Math.max (maxAmount, waterAmountEqn);   
+        };
+    };
+    return maxAmount;
+};
+
+let height = [1,7,2,5,4,7,3,6];
+console.log(waterContainer(height));
+
+let height2 = [2,2,2]
+console.log(waterContainer(height2));
+
+
+// Two-pointer solution
+function waterContainer2 (heights) {
+    let maxAmount = 0;
+    let left = 0;
+    let right = heights.length - 1;
+
+    while (left < right) {
+        let waterAmountEqn = Math.min(heights[left], heights[right]) * (right - left);
+        maxAmount = Math.max (maxAmount, waterAmountEqn);
+
+        if (heights[left] < heights[right]) {
+            left ++;
+        } else right -- ;
+    };
+    return maxAmount;
+};
+
+console.log("\n");
+console.log(waterContainer2(height));
+
+console.log(waterContainer2(height2));

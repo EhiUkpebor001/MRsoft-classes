@@ -13,3 +13,18 @@
         Output: ["we","say",":","yes"]
 
 */
+
+const encode = (stringList) => {
+    let singleString = stringList.join(", ");
+
+    return singleString;
+}
+
+const decode = () => {
+    let originalString = singleString.split("");
+
+    return originalString;
+}
+
+console.log(encode(["neet","code","love","you"]));
+console.log(decode());
