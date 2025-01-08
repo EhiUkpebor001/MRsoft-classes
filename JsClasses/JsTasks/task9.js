@@ -31,7 +31,7 @@ function topKFrequent (nums, k) {
     const result = [];
     for (let i = buckets.length - 1; i >= 0 && result.length < k; i--) {
         result.push(...buckets[i]);
-        // (...) This is called a spread operator.
+        // (...) This is called  a spread operator.
     }
     return result.slice(0, k);      // Ensure only 'k' elements are returned
 }

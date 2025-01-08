@@ -8,6 +8,10 @@
         Input: height = [1,7,2,5,4,7,3,6]
         Output: 36
 
+        index --- These specify the position of an item in an array, starting from 0 to (length - 1)
+        [] --- Array
+        {} --- These specifies a block of code or they are used to create an object
+
         Example 2:
         Input: height = [2,2,2]
         Output: 4
